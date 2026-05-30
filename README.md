@@ -14,6 +14,7 @@ A backend API built with **Node.js**, **Express.js**, and **MySQL** that analyze
 * Fetch a single analyzed profile
 * Health check endpoint
 * Proper error handling
+* Railway cloud deployment
 
 ---
 
@@ -24,6 +25,7 @@ A backend API built with **Node.js**, **Express.js**, and **MySQL** that analyze
 * MySQL
 * GitHub REST API
 * Axios
+* Railways
 * dotenv
 * CORS
 
@@ -67,12 +69,14 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-PORT=3000
-
+For local development:
+PORT: 3000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_mysql_password
 DB_NAME=github_analyzer
+
+For Railway deployment, database credentials are provided through Railway environment variables.
 ```
 
 ### 4. Create Database
@@ -99,6 +103,24 @@ npm start
 
 ---
 
+## Live Demo
+
+### Base URL
+
+```text
+https://github-profile-analyzer-production-982d.up.railway.app
+```
+
+### Test Endpoints
+
+```http
+GET /health
+GET /analyze/kadi-uday
+GET /profiles
+GET /profiles/kadi-uday
+```
+---
+
 ## Database Schema
 
 ### Table: github_profiles
@@ -114,7 +136,6 @@ npm start
 | account_age_days          | INT                                 |
 | followers_following_ratio | DECIMAL(10,2)                       |
 | created_at                | DATETIME                            |
-| analyzed_at               | TIMESTAMP DEFAULT CURRENT_TIMESTAMP |
 
 ---
 
@@ -130,7 +151,6 @@ The application stores the following insights:
 * Account Age (Days)
 * Followers-to-Following Ratio
 * GitHub Account Creation Date
-* Analysis Timestamp
 
 ---
 
@@ -309,7 +329,7 @@ This collection can be imported directly into Postman for API testing.
 Paste your deployed API URL here:
 
 ```text
-https://your-render-app-url.onrender.com
+https://github-profile-analyzer-production-982d.up.railway.app
 ```
 
 ---
