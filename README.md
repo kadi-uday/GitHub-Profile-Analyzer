@@ -136,6 +136,7 @@ GET /profiles/kadi-uday
 | account_age_days          | INT                                 |
 | followers_following_ratio | DECIMAL(10,2)                       |
 | created_at                | DATETIME                            |
+| analyzed_at               | TIMESTAMP DEFAULT CURRENT_TIMESTAMP |
 
 ---
 
@@ -151,6 +152,7 @@ The application stores the following insights:
 * Account Age (Days)
 * Followers-to-Following Ratio
 * GitHub Account Creation Date
+* Analysed Timestamp
 
 ---
 
