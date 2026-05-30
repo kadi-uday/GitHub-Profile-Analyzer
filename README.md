@@ -274,17 +274,6 @@ The API handles:
 
 ---
 
-## Future Improvements
-
-* Pagination for profile listing
-* Sorting and filtering
-* GitHub repository analysis
-* GitHub activity insights
-* Docker support
-* Authentication and authorization
-
----
-
 ## Submission Files
 
 The following files are included with the project submission:
@@ -297,7 +286,7 @@ Contains:
 * Table creation script for `github_profiles`
 * Complete schema required to run the project
 
-### 2. Github-Profile-Analyzer.postman_collection.json
+### 2. github-profile-analyzer.postman_collection.json
 
 Contains:
 
@@ -330,7 +319,7 @@ https://your-render-app-url.onrender.com
 Paste your GitHub repository URL here:
 
 ```text
-https://github.com/your-username/github-profile-analyzer
+https://github.com/kadi-uday/GitHub-Profile-Analyzer
 ```
 ---
 
